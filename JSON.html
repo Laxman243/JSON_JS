@@ -1,0 +1,52 @@
+<Doctype html>
+<html lang="en">
+ 
+ <body>
+		<p>How to loop through all properties in a JSON object.</p>
+
+		<p id="demo"></p>
+
+		<script type ="text/javascript">
+		// Json starts with '{' end's with '}', if you give JSON to a JS variable 
+		/*then it becomes an JS object
+
+		JSON is a way to communicate JS to with server side technologies such as CGI, ASp.net and etc
+		JSON is very easily to translate into JS
+		JSon is a simple Data Exchange format.
+
+		*/
+					var obj1 = {user : "laxman" , age : 22 , country : "India"};
+			var obj2 = {user : "Ved" , age : 28 , country : "India"};
+			var obj3 = {user : "Anil" , age : 51 , country : "India"};
+			
+			var obj4 = { u1:obj1 , u2 : obj2, u3 : obj3};
+	// Converting JS Object into string using stringify and it holding the string data into JS variable named called myJSON
+
+			var myJSON = JSON.stringify(obj1);
+			document.writeln(obj1.user + " " + obj1.age + " " + obj1.country + "<br>");
+			document.writeln(obj2.user + " " + obj2.age + " " + obj2.country + "<br>");
+			document.writeln(obj3.user + " " + obj3.age + " " + obj3.country + "<br>");
+		</script>
+
+		<p>How to loop through all properties in a JSON object.</p>
+		
+		<p id="demo"></p>
+		
+		<script>
+			// Looping Object using For-in loop is similar to foreach loop in java
+
+		var myObj = {"name":"John", "age":30, "car":null};
+		for (x in myObj) {
+			document.getElementById("demo").innerHTML += myObj[x] + "<br>";
+		}
+
+		// Arrays outputs
+		var fruits = ["apple", "banana", "graps"];
+		var drinks = ["cold-drink", "pepsi", "sprite","coco-cola"];
+		var obj5 = {arr1 : fruits, arr2 : drinks};
+
+		document.writeln(fruits[0] + " " + fruits[1] + " " + fruits[2]);
+		document.writeln(drinks[0] + " " + drinks[1] + " " + drinks[2] + " " + drinks[3]);
+</script>
+		</body>
+</html>
